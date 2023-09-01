@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_entrance"
+        android:layout_marginTop="48sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вход"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_marginBottom="145dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:gravity="center"
+        android:text="Добро пожаловать!"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_entrance"
+        app:layout_constraintStart_toStartOf="@+id/tv_entrance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_entrance"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_mini1"
+        android:layout_marginBottom="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="90dp"
+        android:gravity="center"
+        android:text="Выполните вход"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <TextView
+
+        android:id="@+id/tv_mini2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="115dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="или зарегистрируйтесь."
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_mini1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_mini1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mini1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="32dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/email_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mini1"
+        app:layout_constraintVertical_bias="0.184">
+
+        <EditText
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:layout_margin="8dp"
+            android:hint="Введите вашу почту"
+            android:id="@+id/et_email"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+
+             />
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="8dp"
+        android:id="@+id/password_container"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/email_container"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_container"
+        app:layout_constraintTop_toBottomOf="@+id/email_container"
+        app:layout_constraintVertical_bias="0.104"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:id="@+id/et_password"
+            android:layout_width="330dp"
+            android:layout_margin="8dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:hint="Введите пароль" />
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btn_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/password_container"
+        app:layout_constraintEnd_toEndOf="@id/password_container"
+        app:layout_constraintTop_toBottomOf="@id/password_container"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Войти"
+        android:backgroundTint="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Забыли пароль?"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/btn_entrance"
+        app:layout_constraintTop_toBottomOf="@+id/btn_entrance"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_click_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нажми сюда"
+        android:textColor="@color/orange"
+        app:layout_constraintStart_toEndOf="@id/tv_forgot"
+        app:layout_constraintTop_toTopOf="@id/tv_forgot"
+        android:layout_marginStart="8dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
